@@ -40,10 +40,10 @@ class WelcomeComponent extends Component {
 
         // HelloWorldService.executeHelloWorldBeanService()
         // .then( response => this.handleSuccessfulResponse(response) )
-        console.log(HelloWorldService)
-        // HelloWorldService.executeHelloWorldPathVariableService(this.props.match.params.name)
-        // .then( response => this.handleSuccessfulResponse(response) )
-        //catch( error => this.handleError(error) )
+
+        HelloWorldService.executeHelloWorldPathVariableService(this.props.match.params.name)
+        .then( response => this.handleSuccessfulResponse(response) )
+        .catch( error => this.handleError(error) )
     }
 
     handleSuccessfulResponse(response) {
